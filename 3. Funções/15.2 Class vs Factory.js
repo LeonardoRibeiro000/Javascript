@@ -1,0 +1,28 @@
+/* É uma função construtora, ou seja, uma estrutura que descreve estados e 
+comportamentos de um objeto
+
+*/
+//OBS: JavaScript não possui classes, usa-se função construtora
+
+//=================== Exemplo com Classe ========================
+class Pessoa {
+    constructor(nome) {
+        this.nome = nome
+    }
+
+falar() {
+    console.log(`Meu nome é ${this.nome}`)
+}
+}
+const p1 = new Pessoa('João')
+p1.falar()
+
+//=================== Exemplo com Factory =======================
+const pessoa = nome => {
+    return {
+        falar: () => console.log(`Meu nome é ${nome}`)
+    }
+}
+const p2 = pessoa('João')
+p2.falar()
+
